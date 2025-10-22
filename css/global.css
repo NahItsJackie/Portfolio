@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(./fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: Inter-Italic;
+    src: url(./fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #b6ad90;
+    font-family: Inter;
+}
+
+header {
+    background-color: #414833;
+    color: #c2c5aa;
+    padding: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        height: 25px;
+    }
+
+    /* Change the color of links on hover */
+    nav a:hover:not(:first-child, .icon) {
+        padding-bottom: 2px;
+        border-bottom: 3px solid #936639;
+    }
+}
+
+.logo a {
+    text-decoration: none;
+    color: #c2c5aa;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+nav a {
+    color: #c2c5aa;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:not(:first-child) {
+    margin: 0 10px;
+}
+
+.logo {
+    position: absolute;
+    left: 15px;
+}
+
+/* Add an active class to highlight the current page */
+nav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+nav .icon {
+  display: none;
+} 
+
+@media screen and (max-width: 600px) {
+     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    nav a:not(:first-child) {display: none;}
+    nav a.icon {
+        float: right;
+        display: block;
+    }
+
+    /* The "responsive" class is added to the nav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens (display the links vertically instead of horizontally) */
+    nav.responsive {position: relative; flex-direction: column; justify-content: flex-start; overflow: visible;}
+    nav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    nav.responsive a {
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    nav.responsive > a.navlink {
+        margin-top: 40px;
+        padding-left: 15px;
+    }
+
+    nav.responsive > a.navlink ~ a.navlink {
+        margin-top: 0;
+    }
+
+        /* Change the color of links on hover */
+    nav a:hover:not(:first-child, .icon) {
+        background-color: #936639;
+    }
+} 
+
+main {
+    width: 80%;
+    margin-left: 10%;
+}
+
+footer {
+    background-color: #582f0e;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #c2c5aa;
+    display: flex;
+}
+
+footer div {
+    width: 50%;
+    padding: 20px 15px;
+}
+
+#socials {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#socials a {
+    padding-left: 15px;
+    font-size: large;
+    color: #c2c5aa;
+}
+
+#socials a:visited {
+    color: #A4AC86;
+}
+
+#socials a:hover {
+    color: #656D4A;
+}
